@@ -1,0 +1,1 @@
+docker run -d -e SCHEDULE='30 4 * * *' -e COMMAND='curator --config /etc/curator/config.yml  /etc/curator/action_file.yml' --network elk_default  --link elk_elasticsearch_1:elasticsearch curator:latest
